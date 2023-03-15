@@ -105,7 +105,7 @@ void inserirElemento()
 
 		if (pos != -1)
 		{
-			cout << "Elemento já esta na lista" << endl;
+			cout << "Elemento jÃ¡ esta na lista" << endl;
 		}
 		else
 		{
@@ -122,6 +122,28 @@ void inserirElemento()
 
 void excluirElemento()
 {
+	int numexc;
+	int ultpos = nElementos;
+
+	if (nElementos == 0) 
+	{
+		cout << "Nao existem numeros a serem excluidos na lista" << endl;
+	}
+
+	else if (nElementos == 1) {
+		cout << "Digite o numero a ser excluido" << endl;
+		nElementos = 0;
+	}
+
+	else
+	{
+		cout << "Digite o elemento a ser excluido" << endl;
+		cin >> numexc;
+		int pos = posicaoElemento(numexc);
+		lista[pos] = lista[ultpos - 1];
+
+		nElementos--;
+	}
 
 
 }
